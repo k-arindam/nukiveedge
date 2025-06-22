@@ -13,7 +13,7 @@ class NukiveUnsupported extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            'This platform is not supported by Nukive Edge yet!',
+            'This platform is not supported by Nukive Edge AI yet!',
             style: TextStyle(fontSize: 24),
           ),
         ),

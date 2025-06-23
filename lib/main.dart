@@ -6,8 +6,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nukiveedge/firebase_options.dart';
-import 'package:nukiveedge/src/nukive_edge_lite/app.dart';
-import 'package:nukiveedge/src/nukive_edge_pro/app.dart';
+import 'package:nukiveedge/src/ne_mobile/nem_app.dart';
+import 'package:nukiveedge/src/ne_desktop/ned_app.dart';
 import 'package:nukiveedge/src/unsupported_platform_entrypoint.dart';
 
 Future<void> main() async {
@@ -34,11 +34,11 @@ Future<void> main() async {
 }
 
 Widget platformApp() {
-  if (kIsWeb) return const NukiveUnsupported();
+  if (kIsWeb) return const NEUnsupported();
 
-  if (Platform.isIOS || Platform.isAndroid) return const NukiveEdgeLite();
+  if (Platform.isIOS || Platform.isAndroid) return NEMobileApp();
 
-  if (Platform.isMacOS) return const NukiveEdgePro();
+  if (Platform.isMacOS) return NEDesktopApp();
 
-  return const NukiveUnsupported();
+  return const NEUnsupported();
 }

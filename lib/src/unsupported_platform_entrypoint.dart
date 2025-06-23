@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:nukiveedge/src/shared/theme/ne_theme.dart';
 
-class NukiveUnsupported extends StatelessWidget {
-  const NukiveUnsupported({super.key});
+class NEUnsupported extends StatelessWidget {
+  const NEUnsupported({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Nukive Edge Unsupported',
+      theme: NEDarkTheme().buildData(),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Unsupported Platform'),

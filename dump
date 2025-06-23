@@ -3,3 +3,6 @@
 
 <key>CFBundleVersion</key>
 <string>$(FLUTTER_BUILD_NUMBER)</string>
+
+<key>CFBundleName</key>
+<string>$(PRODUCT_NAME)</string>
